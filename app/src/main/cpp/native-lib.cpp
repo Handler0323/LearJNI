@@ -6,7 +6,7 @@
  */
 #include "people/people.h"
 
-extern "C" JNIEXPORT jstring
+extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_myapplication_MainActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
