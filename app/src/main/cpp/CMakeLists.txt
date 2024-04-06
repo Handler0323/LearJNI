@@ -17,6 +17,15 @@ add_library( # Sets the name of the library.
         # Provides a relative path to your source file(s).
         native-lib.cpp)
 
+# 引入jni_dynamic_load.cpp
+add_library(
+        dynamic-lib
+        SHARED
+        jni/jni_dynamic_load.cpp
+)
+
+#将base.h头文件加入搜索路径中
+include_directories(${CMAKE_SOURCE_DIR}/base/)
 find_library( # Sets the name of the path variable.
         log-lib
 
